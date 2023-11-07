@@ -10,8 +10,10 @@ jobs:
     name: "Terraform"
     runs-on: ubuntu-latest
     env:
-      subscription_id: ${{ secrets.subscription_id}}
-      tenant_id: ${{ secrets.tenant_id }}
+      ARM_CLIENT_ID: ${{secrets.ARM_CLIENT_ID}}
+      ARM_CLIENT_SECRET: ${{secrets.MYSUPERSECRETE}}
+      ARM_SUBSCRIPTION_ID: ${{secrets.MYSBSCRIPTIONID}}
+      ARM_TENANT_ID: ${{secrets.ARM_TENANT_ID}}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
